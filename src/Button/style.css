@@ -1,0 +1,17 @@
+.form__button {
+    width: 100%;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(223, 205, 195);
+    transition: background 0.5s;
+}
+
+.form__button:hover {
+    background-color: rgb(215, 177, 157);
+}
+
+.form__button:active {
+    background-color: rgb(214, 145, 108);
+}
