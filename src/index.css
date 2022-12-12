@@ -1,0 +1,14 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::after ::before {
+    box-sizing: inherit;
+}
+
+body {
+    max-width: 800px;
+    color: rgb(223, 205, 195);
+    margin: 8px auto;
+    font-family: 'Roboto Mono', sans-serif;
+}
