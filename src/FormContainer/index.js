@@ -1,9 +1,10 @@
 import './style.css';
 
-const FormContainer = ({ form }) => {
+const FormContainer = ({ form, result }) => {
     return (
         <div className="container">
             {form}
+            {result}
         </div>
     );
 };

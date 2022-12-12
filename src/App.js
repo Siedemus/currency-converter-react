@@ -1,6 +1,7 @@
 import Header from "./Header";
 import FormContainer from "./FormContainer";
 import Form from "./Form";
+import Result from "./Result";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <FormContainer
         form={<Form />}
+        result={<Result />}
       />
     </>
   );
