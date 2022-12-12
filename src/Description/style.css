@@ -1,9 +1,17 @@
 .paragraph {
     background-color: rgba(45, 50, 52, 0.95);
-    margin: auto 8px;
+    margin: auto;
     padding: 10px;
     border-radius: 15px;
     text-align: center;
+    width: 300px;
+}
+
+@media (max-width: 767px) {
+    .paragraph {
+        width: auto;
+        margin: auto 8px;
+    }
 }
 
 .paragraph__link {
