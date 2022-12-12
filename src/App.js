@@ -2,7 +2,8 @@ import Header from "./Header";
 import FormContainer from "./FormContainer";
 import Form from "./Form";
 import Result from "./Result";
-import Button from "./Button"
+import Button from "./Button";
+import Description from "./Description";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         button={<Button/>}
         result={<Result />}
       />
+      <Description/>
     </>
   );
 }

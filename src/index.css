@@ -7,7 +7,7 @@ html {
 }
 
 body {
-    max-width: 800px;
+    max-width: 1000px;
     color: rgb(223, 205, 195);
     margin: 8px auto;
     font-family: 'Roboto Mono', sans-serif;

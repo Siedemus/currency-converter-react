@@ -1,8 +1,8 @@
 .container {
     max-width: 500px;
-    margin: auto;
     background-color: rgba(45, 50, 52, 0.95);
     padding: 50px 15px;
+    padding-bottom: 20px;
     border-radius: 15px;
-    margin: auto auto 100px auto;
+    margin: auto auto 50px auto;
 }
