@@ -1,6 +1,6 @@
 import "./style.css";
 
-export const Form = () => {
+export const Form = ({ resultComponent }) => {
     return (
         <div className="formContainer">
             <form className="form">
@@ -24,7 +24,7 @@ export const Form = () => {
                     <p>
                         <label>
                             <span className="form__labelText">Waluta:</span>
-                            <select className="form__field"name="currency">
+                            <select className="form__field" name="currency">
                                 <option value="GPB">Funt brytyjski</option>
                                 <option value="USD">Dolar amerykański</option>
                                 <option value="EUR">Euro</option>
@@ -32,16 +32,14 @@ export const Form = () => {
                             </select>
                         </label>
                     </p>
-                    <span className="form__containerText">
-                        <p className="form__result"></p>
-                    </span>
+                    {resultComponent}
                 </fieldset>
                 <p>
                     <button className="form__button">Przelicz</button>
                 </p>
                 <p>
-                    * - Pola wymagane <br/>
-                        Kursy pobrane z (<a className="form__link" href="https://www.xe.com/" target="_blank">xe.com</a>)
+                    * - Pola wymagane <br />
+                    Kursy pobrane z (<a className="form__link" href="https://www.xe.com/" target="_blank">xe.com</a>)
                 </p>
             </form>
         </div>

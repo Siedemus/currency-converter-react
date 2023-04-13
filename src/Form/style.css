@@ -42,16 +42,6 @@
     background-color: rgb(214, 171, 148);
 }
 
-.form__containerText {
-    width: 100%;
-    max-width: 100px;
-}
-
-.form__result {
-    text-align: center;
-    font-size: 20px;
-}
-
 .form__button {
     width: 100%;
     margin: 20px auto;
