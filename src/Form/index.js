@@ -1,4 +1,5 @@
 import "./style.css";
+import { currencies } from "../currencies";
 
 export const Form = ({ resultComponent }) => {
     return (
@@ -25,10 +26,14 @@ export const Form = ({ resultComponent }) => {
                         <label>
                             <span className="form__labelText">Waluta:</span>
                             <select className="form__field" name="currency">
-                                <option value="GPB">Funt brytyjski</option>
-                                <option value="USD">Dolar amerykański</option>
-                                <option value="EUR">Euro</option>
-                                <option value="CHF">Frank szwajcarski</option>
+                                {currencies.map(currency => (
+                                    <option
+                                        key={currency.short}
+                                        value={currency.short}
+                                    >
+                                        {currency.name}
+                                    </option>
+                                ))}
                             </select>
                         </label>
                     </p>
