@@ -1,10 +1,23 @@
 import "./style.css";
 import { currencies } from "../currencies";
+import { useState } from "react";
 
 export const Form = ({ resultComponent }) => {
+    const default_option = currencies[0].short
+    const [amount, setAmount] = useState("")
+    const [currency, setCurrency] = useState(default_option)
+
+    const onFormSubmit = (event) => {
+        event.preventDefault();
+        setAmount("")
+    };
+
     return (
         <div className="formContainer">
-            <form className="form">
+            <form
+                className="form"
+                onSubmit={onFormSubmit}
+            >
                 <fieldset className="form__fieldset">
                     <legend className="form__legend">Kalkulator Walut</legend>
                     <p>
@@ -19,13 +32,19 @@ export const Form = ({ resultComponent }) => {
                                 required
                                 placeholder="PLN"
                                 max="9999999999999999"
+                                value={amount}
+                                onChange={({ target }) => setAmount(target.value)}
                             />
                         </label>
                     </p>
                     <p>
                         <label>
                             <span className="form__labelText">Waluta:</span>
-                            <select className="form__field" name="currency">
+                            <select
+                                onChange={({ target }) => setCurrency(target.value)}
+                                className="form__field"
+                                name="currency"
+                            >
                                 {currencies.map(currency => (
                                     <option
                                         key={currency.short}
