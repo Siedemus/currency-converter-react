@@ -2,13 +2,14 @@ import "./style.css";
 import { currencies } from "../currencies";
 import { useState } from "react";
 
-export const Form = ({ resultComponent }) => {
+export const Form = ({ resultComponent, calcResult }) => {
     const default_option = currencies[0].short
     const [amount, setAmount] = useState("")
     const [currency, setCurrency] = useState(default_option)
 
     const onFormSubmit = (event) => {
         event.preventDefault();
+        calcResult(amount, currency)
         setAmount("")
     };
 
