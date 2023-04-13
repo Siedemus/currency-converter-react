@@ -1,0 +1,15 @@
+html {
+  box-sizing: border-box;
+}
+
+*, ::after ::before {
+  box-sizing: inherit;
+}
+
+body {
+  background: url(../images/money.jpg) center / cover fixed no-repeat;
+  color: rgb(223, 205, 195);
+  max-width: 800px;
+  margin: 8px auto;
+  font-family: 'Roboto Mono', sans-serif;
+}
