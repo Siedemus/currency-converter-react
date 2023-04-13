@@ -1,0 +1,12 @@
+.header {
+    text-align: center;
+    font-size: 50px;
+    margin: 60px auto;
+    width: 100%;
+    max-width: 200px;
+    text-decoration: underline;
+    font-family: 'Oswald', sans-serif;
+    background-color: rgba(45, 50, 52, 0.95);
+    padding: 15px;
+    border-radius: 15px
+}
