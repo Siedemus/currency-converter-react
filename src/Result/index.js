@@ -1,7 +1,13 @@
 import "./style.css";
 
-export const Result = () => (
-    <span className="form__containerText">
-        <p className="form__result">test</p>
-    </span>
-)
+export const Result = ({ result }) => {
+    return (
+        <span className="form__containerText">
+            {!!result &&
+                <p className="form__result">
+                    💸{result.fromAmount.toFixed(2)}PLN = {result.toAmount.toFixed(2)}{result.currency}💸
+                </p>
+            }
+        </span>
+    )
+}

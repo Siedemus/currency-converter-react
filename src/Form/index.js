@@ -2,7 +2,7 @@ import "./style.css";
 import { currencies } from "../currencies";
 import { useState } from "react";
 
-export const Form = ({ resultComponent, calcResult }) => {
+export const Form = ({ calcResult, resultComponent }) => {
     const default_option = currencies[0].short
     const [amount, setAmount] = useState("")
     const [currency, setCurrency] = useState(default_option)
@@ -32,7 +32,7 @@ export const Form = ({ resultComponent, calcResult }) => {
                                 className="form__field"
                                 required
                                 placeholder="PLN"
-                                max="9999999999999999"
+                                max="9999999999999"
                                 value={amount}
                                 onChange={({ target }) => setAmount(target.value)}
                             />
@@ -64,7 +64,7 @@ export const Form = ({ resultComponent, calcResult }) => {
                 </p>
                 <p>
                     * - Pola wymagane <br />
-                    Kursy pobrane z (<a className="form__link" href="https://www.xe.com/" target="_blank">xe.com</a>)
+                    Kursy pobrane z (<a className="form__link" rel="noreferrer" href="https://www.xe.com/" target="_blank">xe.com</a>)
                 </p>
             </form>
         </div>
