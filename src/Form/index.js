@@ -64,7 +64,13 @@ export const Form = ({ calcResult, resultComponent }) => {
                 </p>
                 <p>
                     * - Pola wymagane <br />
-                    Kursy pobrane z (<a className="form__link" rel="noreferrer" href="https://www.xe.com/" target="_blank">xe.com</a>)
+                    Kursy pobrane z (<a
+                        className="form__link"
+                        rel="noreferrer"
+                        href="https://www.xe.com/"
+                        target="_blank">
+                        xe.com
+                    </a>)
                 </p>
             </form>
         </div>

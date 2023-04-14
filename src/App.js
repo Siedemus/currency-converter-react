@@ -20,7 +20,13 @@ function App() {
   return (
     <>
       <Header />
-      <Form calcResult={calcResult} resultComponent={<Result result={result}/>} />
+      <Form
+        calcResult={calcResult}
+        resultComponent={
+          <Result
+            result={result}
+          />}
+      />
     </>
   );
 }
