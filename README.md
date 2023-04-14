@@ -6,7 +6,7 @@
 
 Currency-Converter is a simple calculator to convert currencies with fixed values.
 
-Demo: [click here!](https://siedemus.github.io/Currency-Converter/)
+Demo: [click here!](https://siedemus.github.io/currency-converter-react/)
 
 ## Currencies
 In my converter you can convert PLN to:
