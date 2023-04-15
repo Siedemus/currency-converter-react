@@ -9,5 +9,5 @@ export const Result = ({ result }) => {
                 </p>
             }
         </span>
-    )
-}
+    );
+};
