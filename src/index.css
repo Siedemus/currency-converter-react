@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  background: url(/src/money.jpg) center / cover fixed no-repeat;
+  background: url(/public/images/money.jpg) center / cover fixed no-repeat;
   color: rgb(223, 205, 195);
   max-width: 800px;
   margin: 8px auto;

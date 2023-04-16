@@ -1,6 +1,6 @@
 # Currency Converter
 
-![websiteBanner](/public/mainBackground.png)
+![websiteBanner](public/images/mainBackground.png)
 
 ## About project
 
@@ -19,7 +19,7 @@ Each currency has been taken from [xe.com](https://www.xe.com/)
 
 ## How it works
 
-![gif](/public/Animation.gif)
+![gif](public/images/Animation.gif)
 
 ## Some code
 
