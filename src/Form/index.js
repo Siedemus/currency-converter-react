@@ -2,6 +2,7 @@ import "./style.css";
 import { currencies } from "../currencies";
 import { Result } from "./Result"
 import { useState } from "react";
+import { Clock } from "./Clock";
 
 export const Form = () => {
     const default_option = currencies[0].short;
@@ -27,6 +28,7 @@ export const Form = () => {
 
     return (
         <div className="formContainer">
+            <Clock />
             <form
                 className="form"
                 onSubmit={onFormSubmit}

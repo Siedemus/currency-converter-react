@@ -1,9 +1,12 @@
 .formContainer {
     max-width: 500px;
     background-color: rgba(45, 50, 52, 0.95);
-    padding: 100px 15px;
+    padding: 50px 15px;
     border-radius: 15px;
     margin: auto auto 100px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .form {
