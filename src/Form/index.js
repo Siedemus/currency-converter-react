@@ -4,10 +4,11 @@ import { Result } from "./Result"
 import { useState } from "react";
 import { Clock } from "./Clock";
 
+const DEFAULT_CURRENCY = currencies[0].short
+
 export const Form = () => {
-    const default_option = currencies[0].short;
     const [amount, setAmount] = useState("");
-    const [currency, setCurrency] = useState(default_option);
+    const [currency, setCurrency] = useState(DEFAULT_CURRENCY);
     const [result, setResult] = useState("");
 
     const calcResult = (amount, currency) => {
