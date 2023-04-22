@@ -25,4 +25,32 @@ const StyledLegend = styled.legend`
   font-size: 15px;
 `;
 
-export { StyledContainer, StyledForm, StyledFieldset, StyledLegend};
+const LabelText = styled.span`
+  display: inline-block;
+  width: 100%;
+  max-width: 90px;
+  text-align: center;
+  font-weight: bolder;
+  padding: 5px;
+`;
+
+const StyledInput = styled.input`
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  background-color: rgb(223, 205, 195);
+  transition: 0.8s;
+
+  &:focus {
+    background-color: rgb(214, 171, 148);
+  }
+`;
+
+export {
+  StyledContainer,
+  StyledForm,
+  StyledFieldset,
+  StyledLegend,
+  LabelText,
+  StyledInput,
+};

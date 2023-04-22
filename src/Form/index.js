@@ -8,6 +8,7 @@ import {
   StyledFieldset,
   StyledForm,
   StyledLegend,
+  LabelText,
 } from "./styled";
 
 const DEFAULT_CURRENCY = currencies[0].short;
@@ -41,7 +42,7 @@ export const Form = () => {
           <StyledLegend>Kalkulator Walut</StyledLegend>
           <p>
             <label>
-              <span className="form__labelText">Kwota*:</span>
+              <LabelText>Kwota*:</LabelText>
               <input
                 type="number"
                 min="0.01"
@@ -58,7 +59,7 @@ export const Form = () => {
           </p>
           <p>
             <label>
-              <span className="form__labelText">Waluta:</span>
+              <LabelText>Waluta:</LabelText>
               <select
                 onChange={({ target }) => setCurrency(target.value)}
                 className="form__field"
