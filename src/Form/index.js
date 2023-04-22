@@ -3,7 +3,7 @@ import { currencies } from "../currencies";
 import { Result } from "./Result";
 import { useState } from "react";
 import { Clock } from "./Clock";
-import { StyledContainer, StyledForm } from "./styled";
+import { StyledContainer, StyledFieldset, StyledForm } from "./styled";
 
 const DEFAULT_CURRENCY = currencies[0].short;
 
@@ -32,7 +32,7 @@ export const Form = () => {
     <StyledContainer>
       <Clock />
       <StyledForm onSubmit={onFormSubmit}>
-        <fieldset className="form__fieldset">
+        <StyledFieldset>
           <legend className="form__legend">Kalkulator Walut</legend>
           <p>
             <label>
@@ -68,7 +68,7 @@ export const Form = () => {
             </label>
           </p>
           <Result result={result} />
-        </fieldset>
+        </StyledFieldset>
         <p>
           <button className="form__button">Przelicz</button>
         </p>

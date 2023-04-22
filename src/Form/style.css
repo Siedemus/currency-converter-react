@@ -1,14 +1,4 @@
 
-.form__fieldset {
-    border: 3px solid;
-}
-
-.form__legend {
-    padding: 20px;
-    border: 2px dashed;
-    font-size: 15px;
-}
-
 .form__labelText {
     display: inline-block;
     width: 100%;

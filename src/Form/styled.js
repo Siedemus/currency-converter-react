@@ -15,4 +15,9 @@ const StyledForm = styled.form`
   margin: auto 8px;
 `;
 
-export { StyledContainer, StyledForm };
+const StyledFieldset = styled.fieldset`
+  border: 3px solid;
+`;
+
+
+export { StyledContainer, StyledForm, StyledFieldset,};
