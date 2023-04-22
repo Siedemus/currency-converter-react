@@ -1,5 +1,5 @@
-import "./style.css";
+import { StyledHeader } from "./styled";
 
 export const Header = () => (
-    <header className="header">Kantor</header>
+    <StyledHeader>Kantor</StyledHeader>
 );
