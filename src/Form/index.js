@@ -3,7 +3,12 @@ import { currencies } from "../currencies";
 import { Result } from "./Result";
 import { useState } from "react";
 import { Clock } from "./Clock";
-import { StyledContainer, StyledFieldset, StyledForm } from "./styled";
+import {
+  StyledContainer,
+  StyledFieldset,
+  StyledForm,
+  StyledLegend,
+} from "./styled";
 
 const DEFAULT_CURRENCY = currencies[0].short;
 
@@ -33,7 +38,7 @@ export const Form = () => {
       <Clock />
       <StyledForm onSubmit={onFormSubmit}>
         <StyledFieldset>
-          <legend className="form__legend">Kalkulator Walut</legend>
+          <StyledLegend>Kalkulator Walut</StyledLegend>
           <p>
             <label>
               <span className="form__labelText">Kwota*:</span>

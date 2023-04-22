@@ -19,5 +19,10 @@ const StyledFieldset = styled.fieldset`
   border: 3px solid;
 `;
 
+const StyledLegend = styled.legend`
+  padding: 20px;
+  border: 2px dashed;
+  font-size: 15px;
+`;
 
-export { StyledContainer, StyledForm, StyledFieldset,};
+export { StyledContainer, StyledForm, StyledFieldset, StyledLegend};
