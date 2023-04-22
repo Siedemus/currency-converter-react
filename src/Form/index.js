@@ -3,6 +3,7 @@ import { currencies } from "../currencies";
 import { Result } from "./Result"
 import { useState } from "react";
 import { Clock } from "./Clock";
+import { StyledContainer } from "./styled";
 
 const DEFAULT_CURRENCY = currencies[0].short
 
@@ -28,7 +29,7 @@ export const Form = () => {
     };
 
     return (
-        <div className="formContainer">
+        <StyledContainer>
             <Clock />
             <form
                 className="form"
@@ -88,6 +89,6 @@ export const Form = () => {
                     </a>)
                 </p>
             </form>
-        </div>
+        </StyledContainer>
     );
 };
