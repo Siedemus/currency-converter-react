@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const StyledContainer = styled.div`
   max-width: 500px;
-  background-color: rgba(45, 50, 52, 0.95);
+  background-color: ${({ theme }) => theme.colors.grey};
   padding: 50px 15px;
   border-radius: 15px;
   margin: auto auto 100px auto;
@@ -38,7 +38,7 @@ const StyledInput = styled.input`
   border-radius: 10px;
   border: none;
   padding: 10px;
-  background-color: rgb(223, 205, 195);
+  background-color: ${({ theme }) => theme.colors.tan};
   transition: 0.8s;
   flex-grow: 1;
 
@@ -53,7 +53,7 @@ const StyledButton = styled.button`
   padding: 15px;
   border-radius: 10px;
   border: none;
-  background-color: rgb(223, 205, 195);
+  background-color: ${({ theme }) => theme.colors.tan};
   transition: background 1s, 1s;
 
   &:hover {
@@ -85,5 +85,5 @@ export {
   StyledInput,
   StyledButton,
   Link,
-  StyledLabel
+  StyledLabel,
 };
