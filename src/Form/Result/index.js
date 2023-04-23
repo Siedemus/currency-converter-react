@@ -1,14 +1,13 @@
-import { StyledContainer } from "./styled";
-import "./style.css";
+import { StyledContainer, StyledResult } from "./styled";
 
 export const Result = ({ result }) => {
   return (
     <StyledContainer>
       {!!result && (
-        <p className="form__result">
+        <StyledResult>
           💸{result.fromAmount.toFixed(2)}PLN = {result.toAmount.toFixed(2)}
           {result.currency}💸
-        </p>
+        </StyledResult>
       )}
     </StyledContainer>
   );

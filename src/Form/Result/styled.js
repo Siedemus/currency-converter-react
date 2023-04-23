@@ -5,4 +5,10 @@ const StyledContainer = styled.span`
   max-width: 100px;
 `;
 
-export { StyledContainer };
+const StyledResult = styled.p`
+  word-wrap: break-word;
+  text-align: center;
+  font-size: 20px;
+`;
+
+export { StyledContainer, StyledResult };
