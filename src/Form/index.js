@@ -9,6 +9,7 @@ import {
   StyledForm,
   StyledLegend,
   LabelText,
+  StyledInput,
 } from "./styled";
 
 const DEFAULT_CURRENCY = currencies[0].short;
@@ -43,12 +44,11 @@ export const Form = () => {
           <p>
             <label>
               <LabelText>Kwota*:</LabelText>
-              <input
+              <StyledInput
                 type="number"
                 min="0.01"
                 step="any"
                 name="amount"
-                className="form__field"
                 required
                 placeholder="PLN"
                 max="9999999999999"
@@ -60,9 +60,9 @@ export const Form = () => {
           <p>
             <label>
               <LabelText>Waluta:</LabelText>
-              <select
+              <StyledInput
                 onChange={({ target }) => setCurrency(target.value)}
-                className="form__field"
+                as={"select"}
                 name="currency"
               >
                 {currencies.map((currency) => (
@@ -70,7 +70,7 @@ export const Form = () => {
                     {currency.name}
                   </option>
                 ))}
-              </select>
+              </StyledInput>
             </label>
           </p>
           <Result result={result} />
