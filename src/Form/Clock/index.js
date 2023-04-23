@@ -1,5 +1,5 @@
 import { StyledClock } from "./styled";
-import { useClock } from "./useClock";
+import { useCurrentDate } from "./useCurrentDate";
 
 const DATE_FORMAT_OPTIONS = {
     weekday: "long",
@@ -11,7 +11,7 @@ const DATE_FORMAT_OPTIONS = {
 };
 
 export const Clock = () => {
-    const date = useClock(DATE_FORMAT_OPTIONS);
+    const date = useCurrentDate(DATE_FORMAT_OPTIONS);
 
     return (
         <StyledClock>Dziś jest {date}</StyledClock>
