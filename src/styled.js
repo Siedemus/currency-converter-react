@@ -1,3 +1,7 @@
+import { createGlobalStyle } from "styled-components";
+import background from "./money.jpg";
+
+const GlobalStyles = createGlobalStyle`
 html {
   box-sizing: border-box;
 }
@@ -7,7 +11,7 @@ html {
 }
 
 body {
-  background: url(/public/images/money.jpg) center / cover fixed no-repeat;
+  background: url(${background}) center / cover fixed no-repeat;
   color: rgb(223, 205, 195);
   max-width: 800px;
   margin: 8px auto;
@@ -17,7 +21,8 @@ body {
 }
 
 @media screen and (max-width: 992px) {
-  body {
     overflow: auto;
-  }
 }
+`;
+
+export { GlobalStyles };
