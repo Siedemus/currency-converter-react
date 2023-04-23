@@ -65,6 +65,11 @@ const StyledButton = styled.button`
   }
 `;
 
+const Link = styled.a`
+  text-decoration: none;
+  color: brown;
+`;
+
 export {
   StyledContainer,
   StyledForm,
@@ -73,4 +78,5 @@ export {
   LabelText,
   StyledInput,
   StyledButton,
+  Link
 };

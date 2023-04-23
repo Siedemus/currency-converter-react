@@ -1,4 +1,3 @@
-import "./style.css";
 import { currencies } from "../currencies";
 import { Result } from "./Result";
 import { useState } from "react";
@@ -11,6 +10,7 @@ import {
   LabelText,
   StyledInput,
   StyledButton,
+  Link,
 } from "./styled";
 
 const DEFAULT_CURRENCY = currencies[0].short;
@@ -82,14 +82,9 @@ export const Form = () => {
         <p>
           * - Pola wymagane <br />
           Kursy pobrane z (
-          <a
-            className="form__link"
-            rel="noreferrer"
-            href="https://www.xe.com/"
-            target="_blank"
-          >
+          <Link rel="noreferrer" href="https://www.xe.com/" target="_blank">
             xe.com
-          </a>
+          </Link>
           )
         </p>
       </StyledForm>
