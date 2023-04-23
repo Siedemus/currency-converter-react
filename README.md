@@ -51,6 +51,8 @@ This function convert PLN to currency set by user
 - Normalise.css
 - React
 - CRA
+- styled-components
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
