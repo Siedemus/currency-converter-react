@@ -46,6 +46,25 @@ const StyledInput = styled.input`
   }
 `;
 
+const StyledButton = styled.button`
+  width: 100%;
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(223, 205, 195);
+  transition: background 1s, 1s;
+
+  &:hover {
+    background-color: rgb(214, 171, 148);
+    transform: scale(1.02);
+  }
+
+  &:active {
+    background-color: rgb(214, 145, 108);
+  }
+`;
+
 export {
   StyledContainer,
   StyledForm,
@@ -53,4 +72,5 @@ export {
   StyledLegend,
   LabelText,
   StyledInput,
+  StyledButton,
 };

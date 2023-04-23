@@ -10,6 +10,7 @@ import {
   StyledLegend,
   LabelText,
   StyledInput,
+  StyledButton,
 } from "./styled";
 
 const DEFAULT_CURRENCY = currencies[0].short;
@@ -76,7 +77,7 @@ export const Form = () => {
           <Result result={result} />
         </StyledFieldset>
         <p>
-          <button className="form__button">Przelicz</button>
+          <StyledButton>Przelicz</StyledButton>
         </p>
         <p>
           * - Pola wymagane <br />
