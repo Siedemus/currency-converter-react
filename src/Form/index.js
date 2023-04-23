@@ -11,6 +11,7 @@ import {
   StyledInput,
   StyledButton,
   Link,
+  StyledLabel,
 } from "./styled";
 
 const DEFAULT_CURRENCY = currencies[0].short;
@@ -43,7 +44,7 @@ export const Form = () => {
         <StyledFieldset>
           <StyledLegend>Kalkulator Walut</StyledLegend>
           <p>
-            <label>
+            <StyledLabel>
               <LabelText>Kwota*:</LabelText>
               <StyledInput
                 type="number"
@@ -56,10 +57,10 @@ export const Form = () => {
                 value={amount}
                 onChange={({ target }) => setAmount(target.value)}
               />
-            </label>
+            </StyledLabel>
           </p>
           <p>
-            <label>
+            <StyledLabel>
               <LabelText>Waluta:</LabelText>
               <StyledInput
                 onChange={({ target }) => setCurrency(target.value)}
@@ -72,7 +73,7 @@ export const Form = () => {
                   </option>
                 ))}
               </StyledInput>
-            </label>
+            </StyledLabel>
           </p>
           <Result result={result} />
         </StyledFieldset>

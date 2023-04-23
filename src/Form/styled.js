@@ -40,6 +40,7 @@ const StyledInput = styled.input`
   padding: 10px;
   background-color: rgb(223, 205, 195);
   transition: 0.8s;
+  flex-grow: 1;
 
   &:focus {
     background-color: rgb(214, 171, 148);
@@ -70,6 +71,11 @@ const Link = styled.a`
   color: brown;
 `;
 
+const StyledLabel = styled.label`
+  display: flex;
+  flex-wrap: wrap;
+`;
+
 export {
   StyledContainer,
   StyledForm,
@@ -78,5 +84,6 @@ export {
   LabelText,
   StyledInput,
   StyledButton,
-  Link
+  Link,
+  StyledLabel
 };
