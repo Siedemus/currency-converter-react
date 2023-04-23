@@ -6,8 +6,8 @@ const theme = {
   colors: {
     grey: "rgba(45, 50, 52, 0.95)",
     tan: "rgb(223, 205, 195)",
-  }
-}
+  },
+};
 
 function App() {
   return (
