@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const useCurrentDate = (date_format) => {
+export const useCurrentDate = (dateFormatOptions) => {
   const [date, setDate] = useState(new Date());
 
   useEffect(() => {
@@ -11,5 +11,5 @@ export const useCurrentDate = (date_format) => {
     return () => clearInterval(intervalId);
   }, []);
 
-  return date.toLocaleString(undefined, date_format);
+  return date.toLocaleString(undefined, dateFormatOptions);
 };
