@@ -20,8 +20,10 @@ body {
   padding: 5px;
 }
 
-@media screen and (max-width: 992px) {
-    overflow: auto;
+@media (max-width: 992px) {
+    body {
+      overflow: auto;
+    }
 }
 `;
 
