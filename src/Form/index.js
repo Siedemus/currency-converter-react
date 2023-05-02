@@ -43,7 +43,10 @@ export const Form = () => {
   return (
     <StyledContainer>
       {data.status === "waiting" ? (
-        <Loading>"Hej!😀 <b>Pobieramy dane z api Europejskiego Banku Centralnego</b>📲 Daj nam chwilkę.⏰</Loading>
+        <Loading>
+          "Hej!😀 <b>Pobieramy dane z api Europejskiego Banku Centralnego</b>📲
+          Daj nam chwilkę.⏰
+        </Loading>
       ) : data.status === "failed" ? (
         <Loading>
           Ojoj! 🤯 Coś poszło nie tak. 😱 Sprawdź, czy masz połączenie z siecią,
@@ -79,9 +82,9 @@ export const Form = () => {
                     as={"select"}
                     name="currency"
                   >
-                    {currencies.map((currency) => (
-                      <option key={currency.short} value={currency.short}>
-                        {currency.name}
+                    {Object.keys(data.data.rates).map((rate) => (
+                      <option key={rate} value={rate}>
+                        {rate}
                       </option>
                     ))}
                   </StyledInput>
