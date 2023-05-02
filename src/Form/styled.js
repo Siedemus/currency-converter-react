@@ -76,7 +76,14 @@ const StyledLabel = styled.label`
   flex-wrap: wrap;
 `;
 
+const Loading = styled.div`
+  padding: 20px;
+  border: 2px dashed;
+  font-size: 15px;
+`;
+
 export {
+  Loading,
   StyledContainer,
   StyledForm,
   StyledFieldset,

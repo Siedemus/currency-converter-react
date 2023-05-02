@@ -12,6 +12,7 @@ import {
   StyledButton,
   Link,
   StyledLabel,
+  Loading,
 } from "./styled";
 import { useRates } from "./useRates";
 
@@ -41,56 +42,67 @@ export const Form = () => {
 
   return (
     <StyledContainer>
-      <Clock />
-      <StyledForm onSubmit={onFormSubmit}>
-        <StyledFieldset>
-          <StyledLegend>Kalkulator Walut</StyledLegend>
-          <p>
-            <StyledLabel>
-              <LabelText>Kwota*:</LabelText>
-              <StyledInput
-                type="number"
-                min="0.01"
-                step="any"
-                name="amount"
-                required
-                placeholder="PLN"
-                max="9999999999999"
-                value={amount}
-                onChange={({ target }) => setAmount(target.value)}
-              />
-            </StyledLabel>
-          </p>
-          <p>
-            <StyledLabel>
-              <LabelText>Waluta:</LabelText>
-              <StyledInput
-                onChange={({ target }) => setCurrency(target.value)}
-                as={"select"}
-                name="currency"
-              >
-                {currencies.map((currency) => (
-                  <option key={currency.short} value={currency.short}>
-                    {currency.name}
-                  </option>
-                ))}
-              </StyledInput>
-            </StyledLabel>
-          </p>
-          <Result result={result} />
-        </StyledFieldset>
-        <p>
-          <StyledButton>Przelicz</StyledButton>
-        </p>
-        <p>
-          * - Pola wymagane <br />
-          Kursy pobrane z (
-          <Link rel="noreferrer" href="https://www.xe.com/" target="_blank">
-            xe.com
-          </Link>
-          )
-        </p>
-      </StyledForm>
+      {data.status === "waiting" ? (
+        <Loading>"Hej!😀 <b>Pobieramy dane z api Europejskiego Banku Centralnego</b>📲 Daj nam chwilkę.⏰</Loading>
+      ) : data.status === "failed" ? (
+        <Loading>
+          Ojoj! 🤯 Coś poszło nie tak. 😱 Sprawdź, czy masz połączenie z siecią,
+          jeśli tak to błąd leży po naszej stronie przepraszamy. 🫢
+        </Loading>
+      ) : (
+        <>
+          <Clock />
+          <StyledForm onSubmit={onFormSubmit}>
+            <StyledFieldset>
+              <StyledLegend>Kalkulator Walut</StyledLegend>
+              <p>
+                <StyledLabel>
+                  <LabelText>Kwota*:</LabelText>
+                  <StyledInput
+                    type="number"
+                    min="0.01"
+                    step="any"
+                    name="amount"
+                    required
+                    placeholder="PLN"
+                    max="9999999999999"
+                    value={amount}
+                    onChange={({ target }) => setAmount(target.value)}
+                  />
+                </StyledLabel>
+              </p>
+              <p>
+                <StyledLabel>
+                  <LabelText>Waluta:</LabelText>
+                  <StyledInput
+                    onChange={({ target }) => setCurrency(target.value)}
+                    as={"select"}
+                    name="currency"
+                  >
+                    {currencies.map((currency) => (
+                      <option key={currency.short} value={currency.short}>
+                        {currency.name}
+                      </option>
+                    ))}
+                  </StyledInput>
+                </StyledLabel>
+              </p>
+              <Result result={result} />
+            </StyledFieldset>
+            <p>
+              <StyledButton>Przelicz</StyledButton>
+            </p>
+            <p>
+              * - Pola wymagane <br />
+              Kursy pobrane z (
+              <Link rel="noreferrer" href="https://www.xe.com/" target="_blank">
+                xe.com
+              </Link>
+              )
+            </p>
+          </StyledForm>
+        </>
+      )}
     </StyledContainer>
   );
 };
