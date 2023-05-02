@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 export const useRates = () => {
   const [data, setData] = useState({ status: "waiting" });
   const URL =
-    "https://api.exchangerate.host/latest?symbols=USD,EUR,PLN,GBP&base=PLN";
+    "https://api.exchangerate.host/latest?symbols=USD,EUR,CHF,GBP&base=PLN";
 
   useEffect(() => {
     const fetchData = async () => {
