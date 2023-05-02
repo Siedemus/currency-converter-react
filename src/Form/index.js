@@ -13,6 +13,7 @@ import {
   Link,
   StyledLabel,
 } from "./styled";
+import { useRates } from "./useRates";
 
 const DEFAULT_CURRENCY = currencies[0].short;
 
@@ -20,6 +21,7 @@ export const Form = () => {
   const [amount, setAmount] = useState("");
   const [currency, setCurrency] = useState(DEFAULT_CURRENCY);
   const [result, setResult] = useState("");
+  const data = useRates();
 
   const calcResult = (amount, currency) => {
     const cost = currencies.find((curr) => curr.short === currency).cost;
