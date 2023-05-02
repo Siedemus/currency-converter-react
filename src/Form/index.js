@@ -1,4 +1,3 @@
-import { currencies } from "../currencies";
 import { Result } from "./Result";
 import { useState } from "react";
 import { Clock } from "./Clock";
@@ -16,16 +15,14 @@ import {
 } from "./styled";
 import { useRates } from "./useRates";
 
-const DEFAULT_CURRENCY = currencies[0].short;
-
 export const Form = () => {
-  const [amount, setAmount] = useState("");
-  const [currency, setCurrency] = useState(DEFAULT_CURRENCY);
-  const [result, setResult] = useState("");
   const data = useRates();
+  const [amount, setAmount] = useState("");
+  const [currency, setCurrency] = useState("USD");
+  const [result, setResult] = useState("");
 
   const calcResult = (amount, currency) => {
-    const cost = currencies.find((curr) => curr.short === currency).cost;
+    const cost = data.jsonData.rates[currency];
 
     setResult({
       fromAmount: +amount,
@@ -82,7 +79,7 @@ export const Form = () => {
                     as={"select"}
                     name="currency"
                   >
-                    {Object.keys(data.data.rates).map((rate) => (
+                    {Object.keys(data.jsonData.rates).map((rate) => (
                       <option key={rate} value={rate}>
                         {rate}
                       </option>

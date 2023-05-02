@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 
 export const useRates = () => {
   const [data, setData] = useState({ status: "waiting" });
-  const URL = "https://api.exchangerate.host/latest?symbols=USD,EUR,PLN,GBP";
+  const URL =
+    "https://api.exchangerate.host/latest?symbols=USD,EUR,PLN,GBP&base=PLN";
 
   useEffect(() => {
     const fetchData = async () => {
@@ -11,7 +12,7 @@ export const useRates = () => {
         const jsonData = await response.json();
         setData({
           status: "success",
-          data: jsonData,
+          jsonData,
         });
       } catch {
         setData({
