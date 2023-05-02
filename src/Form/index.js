@@ -45,7 +45,7 @@ export const Form = () => {
           Daj nam chwilkę.⏰
         </Loading>
       ) : data.status === "failed" ? (
-        <Loading>
+        <Loading error> 
           Ojoj! 🤯 Coś poszło nie tak. 😱 Sprawdź, czy masz połączenie z siecią,
           jeśli tak to błąd leży po naszej stronie przepraszamy. 🫢
         </Loading>
