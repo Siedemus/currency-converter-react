@@ -12,6 +12,7 @@ import {
   Link,
   StyledLabel,
   Loading,
+  Error,
 } from "./styled";
 import { useRates } from "./useRates";
 
@@ -45,10 +46,10 @@ export const Form = () => {
           Daj nam chwilkę.⏰
         </Loading>
       ) : data.loading === "failed" ? (
-        <Loading error>
+        <Error>
           Ojoj! 🤯 Coś poszło nie tak. 😱 Sprawdź, czy masz połączenie z siecią,
           jeśli tak to błąd leży po naszej stronie przepraszamy. 🫢
-        </Loading>
+        </Error>
       ) : (
         <>
           <Clock />

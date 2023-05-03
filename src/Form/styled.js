@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 const StyledContainer = styled.div`
   max-width: 500px;
@@ -83,17 +83,16 @@ const Loading = styled.div`
   padding: 20px;
   border: 2px dashed;
   font-size: 15px;
+`;
 
-  ${({ error }) =>
-    error &&
-    css`
-      color: crimson;
-      border: crimson 2px dashed;
-    `}
+const Error = styled(Loading)`
+  color: crimson;
+  border: crimson 2px dashed;
 `;
 
 export {
   Loading,
+  Error,
   StyledContainer,
   StyledForm,
   StyledFieldset,
