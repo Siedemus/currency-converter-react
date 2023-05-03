@@ -75,6 +75,7 @@ const Link = styled.a`
 const StyledLabel = styled.label`
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 `;
 
 const Loading = styled.div`
