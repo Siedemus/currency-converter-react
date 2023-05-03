@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export const useRates = () => {
-  const [data, setData] = useState({ status: "waiting" });
+  const [data, setData] = useState({ loading: "waiting" });
   const URL =
     "https://api.exchangerate.host/latest?symbols=USD,EUR,CHF,GBP&base=PLN";
 
@@ -16,12 +16,12 @@ export const useRates = () => {
 
         const jsonData = await response.json();
         setData({
-          status: "success",
+          loading: "success",
           jsonData,
         });
       } catch {
         setData({
-          status: "failed",
+          loading: "failed",
         });
       }
     };

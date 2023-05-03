@@ -39,12 +39,12 @@ export const Form = () => {
 
   return (
     <StyledContainer>
-      {data.status === "waiting" ? (
+      {data.loading === "waiting" ? (
         <Loading>
           "Hej!😀 <b>Pobieramy dane z api Europejskiego Banku Centralnego</b>📲
           Daj nam chwilkę.⏰
         </Loading>
-      ) : data.status === "failed" ? (
+      ) : data.loading === "failed" ? (
         <Loading error>
           Ojoj! 🤯 Coś poszło nie tak. 😱 Sprawdź, czy masz połączenie z siecią,
           jeśli tak to błąd leży po naszej stronie przepraszamy. 🫢
