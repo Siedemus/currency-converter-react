@@ -10,6 +10,7 @@ const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 40px;
+  justify-content: center;
 `;
 
 const StyledForm = styled.form`
