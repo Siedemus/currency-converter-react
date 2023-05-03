@@ -9,6 +9,11 @@ export const useRates = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(URL);
+
+        if (!response.ok) {
+          throw new Error();
+        };
+
         const jsonData = await response.json();
         setData({
           status: "success",
