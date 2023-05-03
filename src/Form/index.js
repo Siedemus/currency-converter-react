@@ -96,8 +96,8 @@ export const Form = () => {
             <p>
               * - Pola wymagane <br />
               Kursy pobrane z (
-              <Link rel="noreferrer" href="https://www.xe.com/" target="_blank">
-                xe.com
+              <Link rel="noreferrer" href="https://exchangerate.host/#/" target="_blank">
+                API Europejskiego Banku Centralnego
               </Link>
               )
             </p>
