@@ -18,7 +18,7 @@ import { useRates } from "./useRates";
 export const Form = () => {
   const data = useRates();
   const [amount, setAmount] = useState("");
-  const [currency, setCurrency] = useState("USD");
+  const [currency, setCurrency] = useState("CHF");
   const [result, setResult] = useState("");
 
   const calcResult = (amount, currency) => {
@@ -45,7 +45,7 @@ export const Form = () => {
           Daj nam chwilkę.⏰
         </Loading>
       ) : data.status === "failed" ? (
-        <Loading error> 
+        <Loading error>
           Ojoj! 🤯 Coś poszło nie tak. 😱 Sprawdź, czy masz połączenie z siecią,
           jeśli tak to błąd leży po naszej stronie przepraszamy. 🫢
         </Loading>
